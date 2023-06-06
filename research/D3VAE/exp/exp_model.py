@@ -168,6 +168,8 @@ class Exp_Model(Exp_Basic):
             preds.append(out.squeeze(1).detach().cpu().numpy())
             trues.append(batch_y.detach().cpu().numpy())
             input.append(batch_x[...,-1:].detach().cpu().numpy())
+            
+        pres = test_data.inverse_transform(preds)
         preds = np.array(preds)
         trues = np.array(trues)
         noisy = np.array(noisy)

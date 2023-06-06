@@ -36,7 +36,7 @@ class StandardScaler(object):
 class Dataset_Custom(Dataset):
 
     def __init__(self, root_path, flag='train', size=None, features='S', data_path='ETTh1.csv', target='OT', scale=True,
-                 inverse=False, timeenc=1, freq='t', cols=None, percentage=0.03):
+                 inverse=True, timeenc=1, freq='t', cols=None, percentage=0.03):
         # size [seq_len, label_len, pred_len]
         # info
         super().__init__()
