@@ -169,7 +169,7 @@ class Exp_Model(Exp_Basic):
             trues.append(batch_y.detach().cpu().numpy())
             input.append(batch_x[...,-1:].detach().cpu().numpy())
             
-        if args.inverse: 
+        if self.args.inverse: 
             preds = test_data.inverse_transform(preds)
             trues = test_data.inverse_transform(trues)
           
